@@ -1,0 +1,20 @@
+<!-- ~/onnx_ros_ws/src/onnx_camera_recognition/launch/onnx_camera_recognition.launch -->
+<launch>
+    <!-- 启动USB摄像头节点（已验证有效的参数） -->
+    <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen">
+        <param name="video_device" value="/dev/video4" />  <!-- 确认的摄像头设备号 -->
+        <param name="image_width" value="640" />
+        <param name="image_height" value="480" />
+        <param name="framerate" value="30" />
+        <param name="pixel_format" value="yuyv" />  <!-- 可正常显示的像素格式 -->
+        <!-- 抑制无效参数警告（可选） -->
+        <param name="white_balance_temperature_auto" value="false" />
+        <param name="focus_auto" value="false" />
+    </node>
+
+    <!-- 启动ONNX推理节点 -->
+    <node name="onnx_inference_node" pkg="onnx_camera_recognition" type="onnx_inference_node.py" output="screen">
+        <param name="model_path" value="$(find onnx_camera_recognition)/models/best1226.onnx" />
+        <param name="label_path" value="$(find onnx_camera_recognition)/labels.txt" />
+    </node>
+</launch>

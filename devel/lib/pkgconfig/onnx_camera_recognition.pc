@@ -1,0 +1,8 @@
+prefix=/home/mustar/onnx_ros_ws/devel
+
+Name: onnx_camera_recognition
+Description: Description of onnx_camera_recognition
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
