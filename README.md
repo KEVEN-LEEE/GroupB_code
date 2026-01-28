@@ -4,7 +4,6 @@ This project is a ROS (Robot Operating System) catkin workspace that integrates 
 
 ## Overview
 
-- **Workspace path:** `d:\onnx\onnx_ros_ws\`
 - **Build system:** ROS catkin (CMake-based)
 - **Main package:** `onnx_camera_recognition`
 - **Key capabilities:**
