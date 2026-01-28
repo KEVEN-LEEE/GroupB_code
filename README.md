@@ -125,5 +125,3 @@ This workspace provides a complete ROS-based pipeline that connects:
 - Recognition results → speech interaction logic,
 - Speech recognition (Vosk) → language model processing (via `gemini_worker.py`),
 - And back to speech responses.
-
-The structure under `d:\onnx\onnx_ros_ws\` reflects a standard catkin workspace, with all functional logic concentrated in the `onnx_camera_recognition` package under `src/`.
