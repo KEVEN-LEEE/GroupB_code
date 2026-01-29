@@ -32,7 +32,6 @@ async def handle_stdin(session):
     await loop.connect_read_pipe(lambda: protocol, sys.stdin)
 
     while True:
-        # 异步读取一行
         line = await reader.readline()
         if not line:
             break
